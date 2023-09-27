@@ -13,6 +13,7 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("My AppBar")),
       body: Column(),
+      bottomNavigationBar: Nav(),
     );
   }
 }
