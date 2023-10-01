@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import 'listview.dart';
+
 
 class Nav extends StatefulWidget {
   Nav({super.key});
@@ -16,7 +16,7 @@ class _NavState extends State<Nav> {
   TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
 
   List<Widget> _widgetOptions = <Widget>[
-    ListViewUI(),
+    
     Text(
       'Likes',
     ),
