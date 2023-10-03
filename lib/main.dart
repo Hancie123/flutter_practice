@@ -1,32 +1,38 @@
-import "package:demo/ui/dashboard.dart";
-import "package:demo/widgets/listviewbuilder.dart";
-import "package:demo/widgets/mylistview.dart";
-import "package:demo/widgets/stackwidget.dart";
+import "package:demo/controllers/incrementController.dart";
+import "package:demo/widgets/dartpractice.dart";
 import "package:flutter/material.dart";
+import "package:provider/provider.dart";
 
 void main(List<String> args) {
-  runApp(
-    MaterialApp(
-      home: MyStackWidget(),
+  runApp(MultiProvider(
+    providers: [ChangeNotifierProvider(create: (_) => IncrementController())],
+    child: MaterialApp(
+      home: MyUI(),
       debugShowCheckedModeBanner: false,
     ),
-  );
+  ));
 }
-textcard1(String txt) {
-  return Container(
-    margin: EdgeInsets.only(left: 10),
-    height: 50,
-    width: 150,
-    decoration: BoxDecoration(
-        color: Colors.green, borderRadius: BorderRadius.circular(20)),
-    child: Center(
-      child: Text(
-        txt,
-        style: TextStyle(color: Colors.white),
-      ),
-    ),
-  );
-}
+
+
+
+
+
+
+// textcard1(String txt) {
+//   return Container(
+//     margin: EdgeInsets.only(left: 10),
+//     height: 50,
+//     width: 150,
+//     decoration: BoxDecoration(
+//         color: Colors.green, borderRadius: BorderRadius.circular(20)),
+//     child: Center(
+//       child: Text(
+//         txt,
+//         style: TextStyle(color: Colors.white),
+//       ),
+//     ),
+//   );
+// }
 
 // class MyDashboard extends StatelessWidget {
 //   MyDashboard({super.key});
